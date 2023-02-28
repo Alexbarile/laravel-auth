@@ -1,0 +1,29 @@
+@extends('layouts.admin')
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-12 m-3">
+                <h1>AGGIUNGI NUOVO POST</h1>
+            </div>
+            <div class="class-12">
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                @endif
+                <form method="POST" action="{{route('admin.posts.store')}}">
+                    @csrf
+                    <div class="form-group m-2">
+                        <label class="fs-2 fw-semibold" for="title">Titolo</label>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Titolo">
+                    </div>
+                    <div class="form-group m-2">
+                        <label class="fs-2 fw-semibold" for="description">Contenuto</label>
+                        <textarea type="password" class="form-control" name="content" id="content" placeholder="Contenuto"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Salva</button>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
