@@ -18,7 +18,7 @@
                         <input type="text" class="form-control" name="title" id="title" placeholder="Titolo">
                     </div>
                     <div class="form-group m-2">
-                        <label class="fs-2 fw-semibold" for="description">Contenuto</label>
+                        <label class="fs-2 fw-semibold" for="content">Contenuto</label>
                         <textarea type="password" class="form-control" name="content" id="content" placeholder="Contenuto"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Salva</button>

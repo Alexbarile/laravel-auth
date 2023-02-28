@@ -32,7 +32,7 @@
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
                             <td>{{ $post->title }}</td>
-                            <td>{{ $post->slug }}</td>
+                            <td>{{ $post->content }}</td>
                             <td>
                                 {{-- segnaposto per azioni --}}
                             </td>
