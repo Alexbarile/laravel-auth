@@ -46,7 +46,6 @@ class PostController extends Controller
         $data['slug'] = $slug;
         $newPost = new Post();
         $newPost->fill($data);
-
         $newPost->save();
 
         // queste operazione si possono fare anche così (3 in 1)
