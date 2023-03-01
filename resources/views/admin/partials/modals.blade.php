@@ -9,7 +9,7 @@
          Sei sicuro di voler cancellare l'elemento selezionato? <span id="modal-item-title"></span> 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-sm btn-square btn-secondary" data-bs-dismiss="modal">Chiudi</button>
           <form class="d-inline-block" action="{{route('admin.posts.destroy', $post->slug)}}" method="POST">
             @csrf
             @method('DELETE')
