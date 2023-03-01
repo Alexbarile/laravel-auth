@@ -32,9 +32,24 @@
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
                             <td>{{ $post->title }}</td>
-                            <td>{{ $post->content }}</td>
+                            <td>{{ $post->slug }}</td>
                             <td>
-                                {{-- segnaposto per azioni --}}
+                                <a href="{{route('admin.posts.show', $post->slug)}}" title="Visualizza post" class="btn btn-sm btn-square btn-primary">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{route('admin.posts.edit', $post->slug)}}" title="Modfica post" class="btn btn-sm btn-square btn-warning">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button type="submit" class="btn btn-sm btn-square btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                {{-- <form class="d-inline-block" action="{{route('admin.posts.destroy', $post->slug)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-square btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form> --}}
                             </td>
                         </tr>                 
                         @endforeach
@@ -43,4 +58,5 @@
             </div>
         </div>
     </div>
+    @include('admin.partials.modals')
 @endsection

@@ -28,4 +28,13 @@ class StorePostRequest extends FormRequest
             'content'=> ['nullable'],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.required'=> 'Il titolo è obbligatorio',
+            'title.unique'=> 'Il titolo è già presente',
+            'title.max'=> 'Il titolo non può superare :max caratteri',
+        ];
+    }
 }
