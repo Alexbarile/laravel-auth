@@ -23,7 +23,7 @@
                     <div class="form-group m-2">
                         <label class="fs-2 fw-semibold" for="content">Contenuto</label>
                         <textarea type="password" class="form-control" name="content" id="content" placeholder="Contenuto"></textarea>
-                        @error('content')
+                        @error('title')
                         <div class="text-danger">{{$message}}</div>
                         @enderror
                     </div>
